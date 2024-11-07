@@ -13,11 +13,7 @@ src/infrastructure/db/sqlite.db-journal
 package-lock.json
 pnpm-lock.yaml
 /test-results/
-/playwright-report/
-/playwright/.cache/
 /test-results/
-/playwright-report/
-/playwright/.cache/
 src/infrastructure/db/db.sqlite
 storybook-static
 .DS_Store
