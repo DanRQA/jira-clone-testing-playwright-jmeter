@@ -7,7 +7,7 @@ export const getUser = async (userId: UserId): Promise<User | null> => {
     where: { id: userId },
   });
   return user ? dnull(user) : null;
-};.
+};
 
 export const getUsers = async (): Promise<User[]> => {
   const users = await db.user.findMany({
