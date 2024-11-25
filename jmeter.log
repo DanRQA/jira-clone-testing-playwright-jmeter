@@ -1,0 +1,478 @@
+2024-11-24 08:18:43,475 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2024-11-24 08:18:43,543 INFO o.a.j.JMeter: Loading user properties from: C:\jmeter\bin\user.properties
+2024-11-24 08:18:43,553 INFO o.a.j.JMeter: Loading system properties from: C:\jmeter\bin\system.properties
+2024-11-24 08:18:43,571 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2024-11-24 08:18:43,571 INFO o.a.j.JMeter: Version 5.6.3
+2024-11-24 08:18:43,571 INFO o.a.j.JMeter: java.version=11.0.18
+2024-11-24 08:18:43,571 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2024-11-24 08:18:43,571 INFO o.a.j.JMeter: os.name=Windows 11
+2024-11-24 08:18:43,571 INFO o.a.j.JMeter: os.arch=amd64
+2024-11-24 08:18:43,572 INFO o.a.j.JMeter: os.version=10.0
+2024-11-24 08:18:43,572 INFO o.a.j.JMeter: file.encoding=Cp1252
+2024-11-24 08:18:43,573 INFO o.a.j.JMeter: java.awt.headless=null
+2024-11-24 08:18:43,573 INFO o.a.j.JMeter: Max memory     =1073741824
+2024-11-24 08:18:43,574 INFO o.a.j.JMeter: Available Processors =8
+2024-11-24 08:18:43,618 INFO o.a.j.JMeter: Default Locale=English (EN)
+2024-11-24 08:18:43,619 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2024-11-24 08:18:43,619 INFO o.a.j.JMeter: JMeterHome=C:\jmeter
+2024-11-24 08:18:43,619 INFO o.a.j.JMeter: user.dir  =C:\Users\ramos\Documents\automationprojects\jira-clone
+2024-11-24 08:18:43,621 INFO o.a.j.JMeter: PWD       =C:\Users\ramos\Documents\automationprojects\jira-clone
+2024-11-24 08:18:43,628 INFO o.a.j.JMeter: IP: 192.168.254.87 Name: DanR-laptop FullName: DanR-laptop.home
+2024-11-24 08:18:43,670 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2024-11-24 08:18:44,163 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.SolarizedDarkTheme
+2024-11-24 08:18:46,507 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\jmeter-bzm-correlation-recorder-3.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 08:18:46,666 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 08:18:46,902 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\bzm-repositories-plugin-1.3.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 08:18:47,049 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\jmeter-bzm-correlation-recorder-3.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 08:18:47,052 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 08:18:47,057 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\bzm-repositories-plugin-1.3.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 08:18:48,037 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=windows_11-7fc3869df556a6f36122df22754a8209-gui
+2024-11-24 08:18:50,027 INFO c.b.j.c.c.t.LocalConfiguration: Installing default files
+2024-11-24 08:18:50,060 INFO c.b.j.c.c.t.LocalConfiguration: bzm - Correlation Recorder Test Plan Template installed
+2024-11-24 08:18:50,067 INFO c.b.j.c.c.t.LocalConfiguration: correlation.properties file loaded
+2024-11-24 08:18:50,316 INFO o.j.r.PluginManager: Plugins Status: [bzm-siebel=3.1, bzm-repositories=1.3, jpgc-plugins-manager=1.10, jmeter-core=5.6.3, jmeter-ftp=5.6.3, jmeter-http=5.6.3, jmeter-jdbc=5.6.3, jmeter-jms=5.6.3, jmeter-junit=5.6.3, jmeter-java=5.6.3, jmeter-ldap=5.6.3, jmeter-mail=5.6.3, jmeter-mongodb=5.6.3, jmeter-native=5.6.3, jmeter-tcp=5.6.3, jmeter-components=5.6.3]
+2024-11-24 08:18:50,955 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2024-11-24 08:18:50,956 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file C:\jmeter\bin\proxyserver.jks
+2024-11-24 08:19:37,913 INFO o.a.j.s.FileServer: Default base='C:\Users\ramos\Documents\automationprojects\jira-clone'
+2024-11-24 08:19:37,917 INFO o.a.j.g.a.Load: Loading file: C:\Users\ramos\Documents\automationprojects\jira-clone\jmeter\jira-clone-jmeter.jmx
+2024-11-24 08:19:37,917 INFO o.a.j.s.FileServer: Set new base='C:\Users\ramos\Documents\automationprojects\jira-clone\jmeter'
+2024-11-24 08:19:38,178 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2024-11-24 08:19:38,208 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2024-11-24 08:19:38,210 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2024-11-24 08:19:38,212 INFO o.a.j.s.SaveService: Loading file: C:\Users\ramos\Documents\automationprojects\jira-clone\jmeter\jira-clone-jmeter.jmx
+2024-11-24 08:19:38,393 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2024-11-24 08:19:38,402 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-11-24 08:19:38,402 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-11-24 08:19:38,402 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-11-24 08:19:38,402 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-11-24 08:19:38,403 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2024-11-24 08:19:38,403 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2024-11-24 08:19:38,936 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2024-11-24 08:19:38,936 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2024-11-24 08:19:38,936 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2024-11-24 08:19:38,937 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2024-11-24 08:19:39,140 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\jmeter-bzm-correlation-recorder-3.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.ResultRenderer], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 08:19:39,144 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.ResultRenderer], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 08:19:39,148 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\bzm-repositories-plugin-1.3.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.ResultRenderer], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 08:19:39,183 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\jmeter-bzm-correlation-recorder-3.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 08:19:39,187 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 08:19:39,191 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\bzm-repositories-plugin-1.3.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 08:19:39,410 INFO o.a.j.s.FileServer: Set new base='C:\Users\ramos\Documents\automationprojects\jira-clone\jmeter'
+2024-11-24 08:24:26,025 INFO o.a.j.g.a.v.TreeClonerForValidation: Running validation with number of threads:1, ignoreTimers:true, number of iterations:1
+2024-11-24 08:24:26,028 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-11-24 08:24:26,029 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-11-24 08:24:26,029 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-11-24 08:24:26,030 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2024-11-24 08:24:26,030 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2024-11-24 08:24:26,245 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\jmeter-bzm-correlation-recorder-3.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 08:24:26,246 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 08:24:26,248 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\bzm-repositories-plugin-1.3.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 08:24:26,258 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-11-24 08:24:26,295 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Scenario 1
+2024-11-24 08:24:26,296 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Scenario 1.
+2024-11-24 08:24:26,296 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-11-24 08:24:26,296 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=180 delayedStart=true
+2024-11-24 08:24:26,297 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-11-24 08:24:26,297 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-11-24 08:24:26,302 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-1
+2024-11-24 08:24:26,311 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = DanR-laptop
+2024-11-24 08:24:26,317 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2024-11-24 08:24:26,586 INFO o.a.j.t.JMeterThread: Thread is done: Scenario 1 1-1
+2024-11-24 08:24:26,586 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-1
+2024-11-24 08:24:26,586 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-11-24 08:24:26,587 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-11-24 08:30:16,859 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-11-24 08:30:16,860 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-11-24 08:30:16,862 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-11-24 08:30:16,894 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Scenario 1
+2024-11-24 08:30:16,894 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Scenario 1.
+2024-11-24 08:30:16,894 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-11-24 08:30:16,894 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=180 delayedStart=true
+2024-11-24 08:30:16,895 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-11-24 08:30:16,895 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-11-24 08:30:16,896 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-1
+2024-11-24 08:30:18,444 INFO o.a.j.t.JMeterThread: Thread is done: Scenario 1 1-1
+2024-11-24 08:30:18,445 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-1
+2024-11-24 08:30:18,445 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-11-24 08:30:18,445 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-11-24 08:30:40,660 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-11-24 08:30:40,661 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-11-24 08:30:40,662 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-11-24 08:30:40,695 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Scenario 1
+2024-11-24 08:30:40,696 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Scenario 1.
+2024-11-24 08:30:40,696 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-11-24 08:30:40,696 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=180 delayedStart=true
+2024-11-24 08:30:40,696 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-11-24 08:30:40,696 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-11-24 08:30:40,698 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-1
+2024-11-24 08:30:42,111 INFO o.a.j.t.JMeterThread: Thread is done: Scenario 1 1-1
+2024-11-24 08:30:42,111 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-1
+2024-11-24 08:30:42,112 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-11-24 08:30:42,112 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-11-24 09:21:31,041 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-11-24 09:21:31,044 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-11-24 09:21:31,050 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-11-24 09:21:31,102 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Scenario 1
+2024-11-24 09:21:31,102 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Scenario 1.
+2024-11-24 09:21:31,102 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-11-24 09:21:31,102 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=180 delayedStart=true
+2024-11-24 09:21:31,103 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-11-24 09:21:31,103 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-11-24 09:21:31,107 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-1
+2024-11-24 09:21:32,762 INFO o.a.j.t.JMeterThread: Thread is done: Scenario 1 1-1
+2024-11-24 09:21:32,762 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-1
+2024-11-24 09:21:32,762 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-11-24 09:21:32,762 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-11-24 09:24:07,804 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-11-24 09:24:07,805 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-11-24 09:24:07,806 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-11-24 09:24:07,917 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Scenario 1
+2024-11-24 09:24:07,917 INFO o.a.j.e.StandardJMeterEngine: Starting 5 threads for group Scenario 1.
+2024-11-24 09:24:07,917 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-11-24 09:24:07,917 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=5 ramp-up=180 delayedStart=true
+2024-11-24 09:24:07,917 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-11-24 09:24:07,917 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-11-24 09:24:17,919 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-1
+2024-11-24 09:24:29,693 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2024-11-24 09:24:29,693 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2024-11-24 09:24:29,820 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:24:41,673 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:24:59,421 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:25:02,923 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-2
+2024-11-24 09:25:13,048 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:25:13,570 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:25:24,528 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:25:27,973 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:25:36,166 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:25:40,074 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:25:47,922 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-3
+2024-11-24 09:25:49,589 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:25:55,694 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:26:02,396 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:26:03,060 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:26:07,816 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:26:15,283 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:26:16,832 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:26:23,224 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:26:32,230 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:26:32,924 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-4
+2024-11-24 09:26:35,012 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:26:39,191 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:26:46,626 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:26:48,661 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:26:49,284 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:26:49,696 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:00,296 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:02,659 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:04,165 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:08,487 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:12,835 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:17,612 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:17,922 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-5
+2024-11-24 09:27:18,450 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:24,219 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:24,305 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:27,732 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:31,538 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:33,512 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:38,441 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:38,862 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:40,541 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:42,879 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:45,569 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:54,743 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-2
+2024-11-24 09:27:54,911 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:54,911 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:55,520 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-4
+2024-11-24 09:27:55,742 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:56,133 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:27:56,242 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-1
+2024-11-24 09:27:56,462 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-5
+2024-11-24 09:27:58,033 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Scenario 1 1-3
+2024-11-24 09:27:58,033 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-3
+2024-11-24 09:27:58,034 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-11-24 09:27:58,034 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-11-24 09:34:13,649 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-11-24 09:34:13,649 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-11-24 09:34:13,650 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-11-24 09:34:13,684 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Scenario 1
+2024-11-24 09:34:13,684 INFO o.a.j.e.StandardJMeterEngine: Starting 5 threads for group Scenario 1.
+2024-11-24 09:34:13,684 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-11-24 09:34:13,684 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=5 ramp-up=240 delayedStart=true
+2024-11-24 09:34:13,684 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-11-24 09:34:13,684 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-11-24 09:34:23,686 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-1
+2024-11-24 09:34:40,222 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:34:52,803 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:35:03,972 INFO o.a.j.g.a.Start: Stopping test
+2024-11-24 09:35:03,988 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-2
+2024-11-24 09:35:03,988 INFO o.a.j.t.JMeterThread: Stopping: Scenario 1 1-2
+2024-11-24 09:35:03,989 WARN o.a.j.t.JMeterThread: Interrupting: Scenario 1 1-2 sampler: Visit Login Page
+2024-11-24 09:35:03,989 WARN o.a.j.t.JMeterThread: No operation pending
+2024-11-24 09:35:03,989 INFO o.a.j.t.JMeterThread: Stopping: Scenario 1 1-1
+2024-11-24 09:35:03,989 WARN o.a.j.t.JMeterThread: The delay timer was interrupted - probably did not wait as long as intended.
+2024-11-24 09:35:03,989 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-1
+2024-11-24 09:35:04,128 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-2
+2024-11-24 09:35:04,128 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-11-24 09:35:04,129 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-11-24 09:35:14,425 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-11-24 09:35:14,425 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-11-24 09:35:14,426 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-11-24 09:35:14,456 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Scenario 1
+2024-11-24 09:35:14,456 INFO o.a.j.e.StandardJMeterEngine: Starting 5 threads for group Scenario 1.
+2024-11-24 09:35:14,457 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-11-24 09:35:14,457 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=5 ramp-up=240 delayedStart=true
+2024-11-24 09:35:14,457 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-11-24 09:35:14,457 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-11-24 09:35:24,458 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-1
+2024-11-24 09:35:38,257 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:35:51,740 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:36:04,155 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:36:18,774 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:36:24,475 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-2
+2024-11-24 09:36:28,814 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:36:35,849 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:36:45,000 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:36:49,557 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:36:59,992 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:37:01,633 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:37:11,212 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:37:13,364 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:37:23,681 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:37:24,470 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-3
+2024-11-24 09:37:25,488 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:37:36,988 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:37:37,457 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:37:39,484 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:37:48,914 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:37:51,750 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:37:52,479 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:02,415 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:03,688 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:07,911 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:16,448 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:16,994 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:21,413 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:24,465 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-4
+2024-11-24 09:38:27,872 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:31,612 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:38,980 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:39,910 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:40,696 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:43,894 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:50,039 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:53,070 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:55,393 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:38:56,715 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:39:04,502 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:39:10,817 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:39:11,221 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:39:13,405 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager HTTP Cookie Manager superseded by HTTP Cookie Manager
+2024-11-24 09:39:18,487 INFO o.a.j.g.a.Start: Stopping test
+2024-11-24 09:39:18,494 INFO o.a.j.t.JMeterThread: Stopping: Scenario 1 1-1
+2024-11-24 09:39:18,494 INFO o.a.j.t.JMeterThread: Stopping: Scenario 1 1-4
+2024-11-24 09:39:18,494 WARN o.a.j.t.JMeterThread: The delay timer was interrupted - probably did not wait as long as intended.
+2024-11-24 09:39:18,494 WARN o.a.j.t.JMeterThread: Interrupting: Scenario 1 1-4 sampler: Delete Project Created
+2024-11-24 09:39:18,495 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-1
+2024-11-24 09:39:18,495 INFO o.a.j.t.JMeterThread: Stopping: Scenario 1 1-5
+2024-11-24 09:39:18,495 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-5
+2024-11-24 09:39:18,495 INFO o.a.j.t.JMeterThread: Stopping: Scenario 1 1-3
+2024-11-24 09:39:18,506 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-5
+2024-11-24 09:39:18,506 WARN o.a.j.t.JMeterThread: Interrupting: Scenario 1 1-3 sampler: Create Project For Current User
+2024-11-24 09:39:18,507 INFO o.a.j.t.JMeterThread: Stopping: Scenario 1 1-2
+2024-11-24 09:39:18,507 WARN o.a.j.t.JMeterThread: The delay timer was interrupted - probably did not wait as long as intended.
+2024-11-24 09:39:18,507 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-2
+2024-11-24 09:39:18,507 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-4
+2024-11-24 09:39:18,508 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-3
+2024-11-24 09:39:18,508 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-11-24 09:39:18,509 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-11-24 11:32:02,448 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\jmeter-bzm-correlation-recorder-3.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.backend.BackendListenerClient], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 11:32:02,467 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.backend.BackendListenerClient], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 11:32:02,474 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\bzm-repositories-plugin-1.3.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.backend.BackendListenerClient], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 11:44:53,745 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-11-24 11:44:53,749 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-11-24 11:44:53,758 INFO o.a.j.v.b.BackendListener: Backend Listener: Starting worker with class: class org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient and queue capacity: 5000
+2024-11-24 11:44:53,762 INFO o.a.j.v.b.BackendListener: Backend Listener: Started  worker with class: class org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient
+2024-11-24 11:44:53,908 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-11-24 11:44:53,978 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Scenario 1
+2024-11-24 11:44:53,978 INFO o.a.j.e.StandardJMeterEngine: Starting 6 threads for group Scenario 1.
+2024-11-24 11:44:53,979 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
+2024-11-24 11:44:53,979 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=6 ramp-up=360 delayedStart=true
+2024-11-24 11:44:53,980 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-11-24 11:44:53,980 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-11-24 11:44:54,035 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:44:58,912 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:45:03,915 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:45:03,997 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-1
+2024-11-24 11:45:08,929 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:45:13,651 INFO o.a.j.g.a.Start: Stopping test
+2024-11-24 11:45:13,673 INFO o.a.j.t.JMeterThread: Stopping: Scenario 1 1-1
+2024-11-24 11:45:13,679 WARN o.a.j.t.JMeterThread: Interrupting: Scenario 1 1-1 sampler: Visit Login Page
+2024-11-24 11:45:13,679 WARN o.a.j.t.JMeterThread: No operation pending
+2024-11-24 11:45:13,679 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-1
+2024-11-24 11:45:13,679 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-2
+2024-11-24 11:45:13,914 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:45:18,718 WARN o.a.j.t.ThreadGroup: Thread won't exit: Scenario 1 1-2
+2024-11-24 11:45:18,719 ERROR o.a.j.u.JMeterUtils: One or more test threads won't exit; see log file.
+2024-11-24 11:45:18,930 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:45:23,922 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:45:28,924 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:45:33,914 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:45:38,918 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:45:43,916 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:45:48,910 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:45:53,922 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:45:58,919 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:46:03,930 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:46:08,923 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:46:13,929 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:46:18,919 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:46:23,918 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:46:24,908 INFO o.a.j.g.a.Start: Stopping test
+2024-11-24 11:46:24,919 INFO o.a.j.t.JMeterThread: Stopping: Scenario 1 1-2
+2024-11-24 11:46:24,919 WARN o.a.j.t.JMeterThread: Interrupting: Scenario 1 1-2 sampler: Visit Login Page
+2024-11-24 11:46:24,943 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-2
+2024-11-24 11:46:24,943 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-11-24 11:46:24,957 INFO o.a.j.v.b.BackendListener: Worker ended
+2024-11-24 11:46:24,958 INFO o.a.j.v.b.i.InfluxdbBackendListenerClient: Sending last metrics to InfluxDB
+2024-11-24 11:46:24,958 INFO o.a.j.v.b.i.HttpMetricsSender: Destroying 
+2024-11-24 11:46:24,959 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jmeter, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:46:24,960 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-11-24 11:46:52,316 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-11-24 11:46:52,317 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-11-24 11:46:52,318 INFO o.a.j.v.b.BackendListener: Backend Listener: Starting worker with class: class org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient and queue capacity: 5000
+2024-11-24 11:46:52,318 INFO o.a.j.v.b.BackendListener: Backend Listener: Started  worker with class: class org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient
+2024-11-24 11:46:52,340 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-11-24 11:46:52,344 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Scenario 1
+2024-11-24 11:46:52,344 INFO o.a.j.e.StandardJMeterEngine: Starting 6 threads for group Scenario 1.
+2024-11-24 11:46:52,344 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
+2024-11-24 11:46:52,344 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=6 ramp-up=360 delayedStart=true
+2024-11-24 11:46:52,345 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-11-24 11:46:52,345 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-11-24 11:46:52,374 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:46:57,357 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:47:02,358 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:47:02,359 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-1
+2024-11-24 11:47:07,346 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:47:12,342 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:47:17,341 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:47:22,344 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:47:27,343 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:47:30,099 INFO o.a.j.g.a.Start: Shutting test down
+2024-11-24 11:47:30,109 INFO o.a.j.t.JMeterThread: Stopping: Scenario 1 1-1
+2024-11-24 11:47:30,110 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-2
+2024-11-24 11:47:30,115 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-1
+2024-11-24 11:47:32,344 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:47:37,352 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:47:42,355 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:47:47,345 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:47:52,341 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:47:57,353 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:48:02,342 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:48:07,347 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:48:12,354 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:48:17,343 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:48:22,345 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:48:27,353 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:48:32,356 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:48:37,348 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:48:42,344 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:48:47,355 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:48:52,349 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:48:57,342 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:49:02,343 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:49:07,350 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:49:11,162 INFO o.a.j.g.a.Start: Stopping test
+2024-11-24 11:49:11,175 INFO o.a.j.t.JMeterThread: Stopping: Scenario 1 1-2
+2024-11-24 11:49:11,175 WARN o.a.j.t.JMeterThread: Interrupting: Scenario 1 1-2 sampler: Visit Login Page
+2024-11-24 11:49:11,189 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-2
+2024-11-24 11:49:11,189 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-11-24 11:49:11,205 INFO o.a.j.v.b.BackendListener: Worker ended
+2024-11-24 11:49:11,205 INFO o.a.j.v.b.i.InfluxdbBackendListenerClient: Sending last metrics to InfluxDB
+2024-11-24 11:49:11,206 INFO o.a.j.v.b.i.HttpMetricsSender: Destroying 
+2024-11-24 11:49:11,207 ERROR o.a.j.v.b.i.HttpMetricsSender: Error writing metrics to influxDB Url: http://localhost:8086/write?db=jira-clone, responseCode: 401, responseBody: {"code":"unauthorized","message":"unauthorized access"}
+2024-11-24 11:49:11,209 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-11-24 11:51:35,946 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-11-24 11:51:35,946 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-11-24 11:51:35,947 INFO o.a.j.v.b.BackendListener: Backend Listener: Starting worker with class: class org.apache.jmeter.visualizers.backend.influxdb.InfluxDBRawBackendListenerClient and queue capacity: 5000
+2024-11-24 11:51:35,948 INFO o.a.j.v.b.BackendListener: Backend Listener: Started  worker with class: class org.apache.jmeter.visualizers.backend.influxdb.InfluxDBRawBackendListenerClient
+2024-11-24 11:51:35,965 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-11-24 11:51:36,083 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Scenario 1
+2024-11-24 11:51:36,083 INFO o.a.j.e.StandardJMeterEngine: Starting 6 threads for group Scenario 1.
+2024-11-24 11:51:36,083 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
+2024-11-24 11:51:36,083 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=6 ramp-up=360 delayedStart=true
+2024-11-24 11:51:36,083 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-11-24 11:51:36,083 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-11-24 11:51:46,086 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-1
+2024-11-24 11:52:28,993 INFO o.a.j.g.a.Start: Stopping test
+2024-11-24 11:52:29,000 INFO o.a.j.t.JMeterThread: Stopping: Scenario 1 1-1
+2024-11-24 11:52:29,001 WARN o.a.j.t.JMeterThread: Interrupting: Scenario 1 1-1 sampler: Visit Login Page
+2024-11-24 11:52:29,002 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-2
+2024-11-24 11:52:29,006 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-1
+2024-11-24 11:52:33,919 INFO o.a.j.g.a.Start: Stopping test
+2024-11-24 11:52:33,928 INFO o.a.j.t.JMeterThread: Stopping: Scenario 1 1-2
+2024-11-24 11:52:33,929 WARN o.a.j.t.JMeterThread: Interrupting: Scenario 1 1-2 sampler: Visit Login Page
+2024-11-24 11:52:33,936 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-2
+2024-11-24 11:52:33,936 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-11-24 11:52:33,940 INFO o.a.j.v.b.BackendListener: Worker ended
+2024-11-24 11:52:33,940 INFO o.a.j.v.b.i.HttpMetricsSender: Destroying 
+2024-11-24 11:52:33,942 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-11-24 11:52:50,879 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-11-24 11:52:50,879 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-11-24 11:52:50,880 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-11-24 11:52:50,926 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Scenario 1
+2024-11-24 11:52:50,926 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Scenario 1.
+2024-11-24 11:52:50,926 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
+2024-11-24 11:52:50,926 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=360 delayedStart=true
+2024-11-24 11:52:50,927 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-11-24 11:52:50,927 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-11-24 11:52:50,928 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-1
+2024-11-24 11:52:50,946 INFO o.a.j.t.JMeterThread: Thread is done: Scenario 1 1-1
+2024-11-24 11:52:50,946 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-1
+2024-11-24 11:52:50,947 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-11-24 11:52:50,947 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-11-24 11:53:40,178 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-11-24 11:53:40,179 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-11-24 11:53:40,179 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-11-24 11:53:40,228 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Scenario 1
+2024-11-24 11:53:40,228 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Scenario 1.
+2024-11-24 11:53:40,228 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
+2024-11-24 11:53:40,228 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=360 delayedStart=true
+2024-11-24 11:53:40,228 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-11-24 11:53:40,228 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-11-24 11:53:40,229 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-1
+2024-11-24 11:53:40,247 INFO o.a.j.t.JMeterThread: Thread is done: Scenario 1 1-1
+2024-11-24 11:53:40,247 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-1
+2024-11-24 11:53:40,247 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-11-24 11:53:40,247 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-11-24 11:53:53,779 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\jmeter-bzm-correlation-recorder-3.1.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 11:53:53,781 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 11:53:53,782 INFO o.a.j.r.ClassFinder: Will scan jar C:\jmeter\lib\ext\bzm-repositories-plugin-1.3.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-11-24 12:02:59,674 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-11-24 12:02:59,674 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-11-24 12:02:59,675 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-11-24 12:02:59,717 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Scenario 1
+2024-11-24 12:02:59,717 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Scenario 1.
+2024-11-24 12:02:59,717 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
+2024-11-24 12:02:59,717 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=360 delayedStart=true
+2024-11-24 12:02:59,717 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-11-24 12:02:59,717 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-11-24 12:02:59,719 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-1
+2024-11-24 12:02:59,737 INFO o.a.j.t.JMeterThread: Thread is done: Scenario 1 1-1
+2024-11-24 12:02:59,737 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-1
+2024-11-24 12:02:59,738 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-11-24 12:02:59,738 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-11-24 12:07:22,186 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-11-24 12:07:22,186 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-11-24 12:07:22,187 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-11-24 12:07:22,229 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Scenario 1
+2024-11-24 12:07:22,229 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Scenario 1.
+2024-11-24 12:07:22,229 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
+2024-11-24 12:07:22,229 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=360 delayedStart=true
+2024-11-24 12:07:22,230 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-11-24 12:07:22,230 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-11-24 12:07:22,231 INFO o.a.j.t.JMeterThread: Thread started: Scenario 1 1-1
+2024-11-24 12:07:22,247 INFO o.a.j.t.JMeterThread: Thread is done: Scenario 1 1-1
+2024-11-24 12:07:22,247 INFO o.a.j.t.JMeterThread: Thread finished: Scenario 1 1-1
+2024-11-24 12:07:22,248 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-11-24 12:07:22,248 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
