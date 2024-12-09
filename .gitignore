@@ -17,3 +17,7 @@ pnpm-lock.yaml
 src/infrastructure/db/db.sqlite
 storybook-static
 .DS_Store
+node_modules/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
