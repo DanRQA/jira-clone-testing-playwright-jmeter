@@ -20,7 +20,11 @@ jobs:
     - name: Setup and Start Application
       run: npm run setup-and-dev &
     - name: Wait for Application Server to be Ready
-      run: npx wait-on http://localhost:3000
+      run: npx wait-on http://localhost:3000 --timeout 300000
+    - name: Print Application Server Logs
+      run: |
+        echo "Application server logs:"
+        cat /path/to/your/application/logs
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v4
