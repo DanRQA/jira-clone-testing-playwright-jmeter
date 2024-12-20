@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+import { Page, Locator } from "@playwright/test";
 
 export class ProjectsPage {
   private readonly page: Page;
@@ -7,15 +7,61 @@ export class ProjectsPage {
     this.page = page;
   }
 
-  async navigateToProjectsPage() {
-    await this.page.goto(this.getProjectsPageUrl());
-  }
-
-  getProjectsPageUrl() {
+  getProjectsPageUrl(): string {
     return "/projects";
   }
 
-  getAddProjectButton() {
+  getAddProjectButton(): Locator {
     return this.page.getByRole("button", { name: "Add Project" });
+  }
+
+  getNewProjectsPageUrl(): string {
+    return "/projects/new";
+  }
+
+  getUserAvatarButton(userInitials: string): Locator {
+    return this.page.getByText(userInitials);
+  }
+
+  getLogoutButton(): Locator {
+    return this.page.getByRole("button", { name: "Log out" });
+  }
+
+  getTitleField(): Locator {
+    return this.page.getByRole("textbox", { name: "Write the title" });
+  }
+
+  setProjectTitle(): Locator {
+    return this.getTitleField();
+  }
+
+  getDescriptionField(): Locator {
+    return this.page.getByRole("textbox", { name: "Add a description" });
+  }
+
+  setProjectDescription(): Locator {
+    return this.getDescriptionField();
+  }
+
+  getAcceptButton(): Locator {
+    return this.page.getByRole("button", { name: "Accept changes" });
+  }
+
+  getProjectsCard(): Locator {
+    return this.page.locator('a[href^="/projects/"]:not([href="/projects/new"])');
+  }
+
+  async findLastProjectCard(projectName: string): Promise<Locator | null> {
+    await this.getProjectsCard().last().waitFor();
+    const projectCards = this.getProjectsCard();
+    const projectCardsCount = await projectCards.count();
+    for (let i = 0; i < projectCardsCount; i++) {
+      const projectCard = projectCards.nth(i);
+      const projectCardText = await projectCard.textContent();
+      if (projectCardText?.includes(projectName)) {
+        return projectCard;
+      }
+    }
+    return null;
   }
 }
