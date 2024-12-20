@@ -12,7 +12,7 @@ export class LoginPage {
   }
 
   getLoginPageUrl() {
-    return "/";
+    return "/login";
   }
 
   getLoginPageHeader() {
