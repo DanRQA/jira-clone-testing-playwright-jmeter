@@ -31,16 +31,8 @@ export class ProjectsPage {
     return this.page.getByRole("textbox", { name: "Write the title" });
   }
 
-  setProjectTitle(): Locator {
-    return this.getTitleField();
-  }
-
   getDescriptionField(): Locator {
     return this.page.getByRole("textbox", { name: "Add a description" });
-  }
-
-  setProjectDescription(): Locator {
-    return this.getDescriptionField();
   }
 
   getAcceptButton(): Locator {
@@ -51,7 +43,7 @@ export class ProjectsPage {
     return this.page.locator('a[href^="/projects/"]:not([href="/projects/new"])');
   }
 
-  async findLastProjectCard(projectName: string): Promise<Locator | null> {
+  async findLastProjectCard(projectName: string): Promise<Locator> {
     await this.getProjectsCard().last().waitFor();
     const projectCards = this.getProjectsCard();
     const projectCardsCount = await projectCards.count();
@@ -62,6 +54,6 @@ export class ProjectsPage {
         return projectCard;
       }
     }
-    return null;
+    throw new Error(`Project card with name ${projectName} not found`);
   }
 }
