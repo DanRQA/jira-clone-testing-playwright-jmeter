@@ -24,7 +24,11 @@ export const UserAvatar = ({
 
   return (
     <Tooltip title={name} show={tooltip}>
-      <Avatar.Root className="flex items-center rounded-full" style={imageSize}>
+      <Avatar.Root 
+        className="flex items-center rounded-full" 
+        style={imageSize}
+        data-testid="user-avatar"
+      >
         <Avatar.Image
           className="rounded-full object-cover"
           src={image ? imageSrc : undefined}

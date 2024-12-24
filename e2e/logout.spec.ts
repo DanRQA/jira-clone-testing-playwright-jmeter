@@ -11,16 +11,16 @@ test.beforeEach(async ({ page, baseURL }: { page: Page; baseURL?: string }) => {
 
   const projectsPage = new ProjectsPage(page);
   await test.step("User is logged in via api and starts in the Projects Page", async () => {
+    await page.goto(`${baseURL}/projects`);
     await expect(page).toHaveURL(projectsPage.getProjectsPageUrl());
   });
 });
 
 test("User is able to logout", async ({ page }: { page: Page }) => {
-  const userInitials = "ds";
   const loginPage = new LoginPage(page);
   const projectsPage = new ProjectsPage(page);
   await test.step("User clicks on logout button", async () => {
-    await projectsPage.getUserAvatarButton(userInitials).click();
+    await projectsPage.getUserAvatarButton().click();
     await projectsPage.getLogoutButton().click();
   });
 
