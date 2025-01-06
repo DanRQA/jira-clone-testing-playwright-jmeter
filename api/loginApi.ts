@@ -27,5 +27,4 @@ export async function login(
       _action: "setUser",
     },
   });
-  await page.goto(`${baseURL}/projects`);
 }
