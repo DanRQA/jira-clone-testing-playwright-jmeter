@@ -19,8 +19,8 @@ export class ProjectsPage {
     return "/projects/new";
   }
 
-  getUserAvatarButton(userInitials: string): Locator {
-    return this.page.getByText(userInitials);
+  getUserAvatarButton(): Locator {
+    return this.page.getByTestId('user-avatar');
   }
 
   getLogoutButton(): Locator {
@@ -43,7 +43,7 @@ export class ProjectsPage {
     return this.page.locator('a[href^="/projects/"]:not([href="/projects/new"])');
   }
 
-  async findLastProjectCard(projectName: string): Promise<Locator> {
+  async findLastProjectCard(projectName: string): Promise<Locator | null> {
     await this.getProjectsCard().last().waitFor();
     const projectCards = this.getProjectsCard();
     const projectCardsCount = await projectCards.count();
@@ -54,6 +54,6 @@ export class ProjectsPage {
         return projectCard;
       }
     }
-    throw new Error(`Project card with name ${projectName} not found`);
+    return null;
   }
 }
