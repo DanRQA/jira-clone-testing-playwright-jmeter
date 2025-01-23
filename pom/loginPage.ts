@@ -5,14 +5,14 @@ export class LoginPage {
   private readonly url: string;
   private readonly loginPageHeader: Locator;
   private readonly userSelectDropdown: Locator;
-  private readonly loginButton: Locator;
+  private readonly loginBtn: Locator;
 
   constructor(page: Page) {
     this.page = page;
     this.url = "/login";
     this.loginPageHeader = page.getByRole("heading", { name: "Select login user" });
     this.userSelectDropdown = page.getByRole("combobox", { name: "Open user select" });
-    this.loginButton = page.getByRole("button", { name: "Login" });
+    this.loginBtn = page.getByRole("button", { name: "Login" });
   }
 
   async navigateTo(): Promise<void> {
@@ -31,11 +31,11 @@ export class LoginPage {
     return this.userSelectDropdown;
   }
 
-  getLoginButton(): Locator {
-    return this.loginButton;
+  getLoginBtn(): Locator {
+    return this.loginBtn;
   }
 
-  async clickLoginButton(): Promise<void> {
-    await this.getLoginButton().click();
+  async clickLoginBtn(): Promise<void> {
+    await this.getLoginBtn().click();
   }
 }
