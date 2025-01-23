@@ -1,29 +1,41 @@
-import { Page } from "@playwright/test";
+import { Page, Locator } from "@playwright/test";
 
 export class LoginPage {
   private readonly page: Page;
+  private readonly url: string;
+  private readonly loginPageHeader: Locator;
+  private readonly userSelectDropdown: Locator;
+  private readonly loginButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
+    this.url = "/login";
+    this.loginPageHeader = page.getByRole("heading", { name: "Select login user" });
+    this.userSelectDropdown = page.getByRole("combobox", { name: "Open user select" });
+    this.loginButton = page.getByRole("button", { name: "Login" });
   }
 
-  async navigateToLoginPage() {
-    await this.page.goto("/");
+  async navigateTo(): Promise<void> {
+    await this.page.goto(this.url);
   }
 
-  getLoginPageUrl() {
-    return "/login";
+  getPageUrl(): string {
+    return this.url;
   }
 
-  getLoginPageHeader() {
-    return this.page.getByRole("heading", { name: "Select login user" });
+  getLoginPageHeader(): Locator {
+    return this.loginPageHeader;
   }
 
-  getUserSelectDropDown() {
-    return this.page.getByRole("combobox", { name: "Open user select" });
+  getUserSelectDropDown(): Locator {
+    return this.userSelectDropdown;
   }
 
-  getLoginButton() {
-    return this.page.getByRole("button", { name: "Login" });
+  getLoginButton(): Locator {
+    return this.loginButton;
+  }
+
+  async clickLoginButton(): Promise<void> {
+    await this.getLoginButton().click();
   }
 }
