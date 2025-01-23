@@ -2,7 +2,13 @@ import { test, expect, Page } from "@playwright/test";
 import { LoginPage } from "../pom/loginPage";
 import { ProjectsPage } from "../pom/projectsPage";
 
-test("Login as default user", async ({ page, baseURL }: { page: Page; baseURL?: string }): Promise<void> => {
+test("Login as default user", async ({
+  page,
+  baseURL,
+}: {
+  page: Page;
+  baseURL?: string;
+}): Promise<void> => {
   const loginPage = new LoginPage(page);
   const projectsPage = new ProjectsPage(page);
 
@@ -20,7 +26,7 @@ test("Login as default user", async ({ page, baseURL }: { page: Page; baseURL?: 
   });
 
   await test.step("Click login button", async (): Promise<void> => {
-    await loginPage.clickLoginButton();
+    await loginPage.clickLoginBtn();
   });
 
   await test.step("Assert user is in the Projects Page after login", async (): Promise<void> => {

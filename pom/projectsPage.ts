@@ -4,25 +4,31 @@ export class ProjectsPage {
   private readonly page: Page;
   private readonly url: string;
   private readonly newProjectUrl: string;
-  private readonly addProjectButton: Locator;
+  private readonly addProjectBtn: Locator;
   private readonly getProjectTitle: Locator;
   private readonly getProjectDescription: Locator;
-  private readonly acceptButton: Locator;
+  private readonly acceptBtn: Locator;
   private readonly userCheckbox: Locator;
-  private readonly logOutButton: Locator;
-  private readonly userAvatarButton: Locator;
+  private readonly logOutBtn: Locator;
+  private readonly userAvatarBtn: Locator;
+  private readonly deleteProjectBtn: Locator;
+  private readonly deleteIssueTxt: Locator;
+  private readonly confirmDeleteProjectBtn: Locator;
 
   constructor(page: Page) {
     this.page = page;
     this.url = "/projects";
     this.newProjectUrl = "/projects/new";
-    this.addProjectButton = page.getByRole("button", { name: "Add Project" });
+    this.addProjectBtn = page.getByRole("button", { name: "Add Project" });
     this.getProjectTitle = page.getByRole("textbox", { name: "Write the title" });
     this.getProjectDescription = page.getByRole("textbox", { name: "Add a description" });
-    this.acceptButton = page.getByRole("button", { name: "Accept changes" });
+    this.acceptBtn = page.getByRole("button", { name: "Accept changes" });
     this.userCheckbox = page.getByRole("checkbox");
-    this.logOutButton = page.getByRole("button", { name: "Log out" });
-    this.userAvatarButton = page.getByTestId("user-avatar");
+    this.logOutBtn = page.getByRole("button", { name: "Log out" });
+    this.userAvatarBtn = page.getByTestId("user-avatar");
+    this.deleteProjectBtn = page.getByTitle("Delete project");
+    this.deleteIssueTxt = page.getByText("Delete issue?");
+    this.confirmDeleteProjectBtn = page.getByRole("button", { name: "Delete" });
   }
 
   async navigateTo(): Promise<void> {
@@ -33,8 +39,8 @@ export class ProjectsPage {
     return this.url;
   }
 
-  async clickAddProjectButton(): Promise<void> {
-    await this.addProjectButton.click();
+  async clickAddProjectBtn(): Promise<void> {
+    await this.addProjectBtn.click();
   }
 
   getNewProjectsPageUrl(): string {
@@ -46,11 +52,11 @@ export class ProjectsPage {
   }
 
   async clickUserAvatarButton(): Promise<void> {
-    await this.userAvatarButton.click();
+    await this.userAvatarBtn.click();
   }
 
-  async clickLogOutButton(): Promise<void> {
-    await this.logOutButton.click();
+  async clickLogOutBtn(): Promise<void> {
+    await this.logOutBtn.click();
   }
 
   async fillProjectDetails(projectTitle: string, projectDescription: string): Promise<void> {
@@ -58,11 +64,28 @@ export class ProjectsPage {
     await this.getProjectDescription.pressSequentially(projectDescription, { delay: 100 });
   }
 
-  async clickAcceptButton(): Promise<void> {
-    await this.acceptButton.click();
+  async clickAcceptBtn(): Promise<void> {
+    await this.acceptBtn.click();
   }
 
   getProjectCardTitle(projectTitle: string): Locator {
     return this.page.getByRole("heading", { name: projectTitle });
+  }
+
+  async clickDeleteProjectBtn(projectTitle: string): Promise<void> {
+    const projectCard = this.page
+      .locator(`h2:has-text("${projectTitle}")`)
+      .locator("..")
+      .locator("..")
+      .locator("..");
+    await projectCard.locator(this.deleteProjectBtn).click();
+  }
+
+  getDeleteIssueModal(): Locator {
+    return this.deleteIssueTxt;
+  }
+
+  async clickToConfirmProjectDeletion(): Promise<void> {
+    await this.confirmDeleteProjectBtn.click();
   }
 }

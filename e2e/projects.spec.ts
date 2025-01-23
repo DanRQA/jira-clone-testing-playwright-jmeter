@@ -33,12 +33,12 @@ test("Default user is able to create a project", async ({ page }: { page: Page }
   const { projectTitle, projectDescription } = generateProjectDetails();
 
   await test.step("User clicks on Add Project Button", async () => {
-    await projectsPage.clickAddProjectButton();
+    await projectsPage.clickAddProjectBtn();
   });
 
   await test.step("User fills in project details and accepts", async () => {
     await projectsPage.fillProjectDetails(projectTitle, projectDescription);
-    await projectsPage.clickAcceptButton();
+    await projectsPage.clickAcceptBtn();
   });
 
   await test.step("Assert new project is visible in the Projects page", async () => {
@@ -60,7 +60,7 @@ test("Default user can create a project and assign multiple users as owners", as
   const { projectTitle, projectDescription } = generateProjectDetails();
 
   await test.step("User clicks on Add Project Button", async () => {
-    await projectsPage.clickAddProjectButton();
+    await projectsPage.clickAddProjectBtn();
   });
 
   await test.step("User fills in project details", async () => {
@@ -72,7 +72,7 @@ test("Default user can create a project and assign multiple users as owners", as
   });
 
   await test.step("User clicks accept button", async () => {
-    await projectsPage.clickAcceptButton();
+    await projectsPage.clickAcceptBtn();
   });
 
   await test.step("Assert new project is visible in the Projects page", async () => {
@@ -99,8 +99,7 @@ test("Default user can create a project and assign multiple users as owners", as
   });
 });
 
-//TODO: fix test
-test.skip("Project Owner is Able to Delete Project", async ({
+test("Project Owner is Able to Delete Project", async ({
   page,
   baseURL,
 }: {
@@ -109,8 +108,8 @@ test.skip("Project Owner is Able to Delete Project", async ({
 }) => {
   if (!baseURL) throw new Error("baseURL is not defined");
   const projectsPage = new ProjectsPage(page);
-  const projectDescription = faker.lorem.sentence();
-  const projectTitle = faker.lorem.words(3);
+
+  const { projectTitle, projectDescription } = generateProjectDetails();
 
   await test.step("Create new project via API", async () => {
     const postNewProject = await page.request.post(`${baseURL}/projects/new`, {
@@ -132,16 +131,27 @@ test.skip("Project Owner is Able to Delete Project", async ({
     await projectsPage.navigateTo();
   });
 
-  await test.step("Find and delete the project", async () => {
-    await page.getByRole("button", { name: "Open delete issue dialog" }).last().click();
-    await page.getByRole("button", { name: "Delete" }).click();
+  await test.step("Assert project is found", async () => {
+    await expect(projectsPage.getProjectCardTitle(projectTitle)).toBeVisible();
   });
 
-  await test.step("Wait for Delete Project Modal to close", async () => {
-    await expect(page.getByText("Delete issue?")).not.toBeVisible();
+  await test.step("Find project by title", async () => {
+    await projectsPage.clickDeleteProjectBtn(projectTitle);
   });
 
-  await test.step("Verify project is no longer found", async () => {
-    expect(page.getByRole("heading", { name: projectTitle })).toBeFalsy();
+  await test.step("Enter delete project modal", async () => {
+    await expect(projectsPage.getDeleteIssueModal()).toBeVisible();
+  });
+
+  await test.step("Delete the project", async () => {
+    await projectsPage.clickToConfirmProjectDeletion();
+  });
+
+  await test.step("Assert delete project modal closed ", async () => {
+    await expect(projectsPage.getDeleteIssueModal()).not.toBeVisible();
+  });
+
+  await test.step("Assert project is no longer found", async () => {
+    await expect(projectsPage.getProjectCardTitle(projectTitle)).not.toBeVisible();
   });
 });
