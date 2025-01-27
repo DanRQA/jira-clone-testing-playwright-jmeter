@@ -1,19 +1,61 @@
-# jira-clone-testing-playwright-jmeter (WIP)
-Repo for a Jira clone demo featuring end-to-end tests with Playwright and performance tests with [JMeter](./jmeter/README.md).
+# Jira Clone Demo 📋
 
-## End-to-End Tests
+🚀 **Welcome to the Jira Clone Demo repository!**  
+This project is a fork of [daniserrano7/jira-clone](https://github.com/daniserrano7/jira-clone), with the addition of:
 
-### Login Tests
-- **Login as default user**: This test navigates to the login page, verifies the login page elements, performs a login, and asserts that the user is redirected to the Projects Page.
+- **End-to-End Tests** using [Playwright](https://playwright.dev/) and **TypeScript**
+- **Performance Tests** using [JMeter](https://jmeter.apache.org/).
 
-### Projects Tests
-- **User is able to add a project**: User is logged in via API and in the projects page, verifies that the user can click on the Add Project button, fill out the project title and description using faker, and then verify that the new project is present in the Projects page.
-- **Default user can create a project**: Verifies that a logged-in user can create a new project by filling out the project form with randomly generated title and description using faker.js.
-- **Default user can create a project with multiple owners**: Tests the ability to create a project and assign multiple users as owners. The test:
-  - Creates a project with random details
-  - Selects multiple users as project owners
-  - Verifies project access by logging in as different users
-  - Confirms that assigned users can see the project in their project list
+> 🛠️ **Work in Progress**: I'm actively adding new tests and improving this project. Stay tuned for updates!
 
-### Logout Tests
-- **User is able to logout**: This test verifies that a logged-in user can successfully log out by clicking on the logout button and being redirected to the login screen.
+---
+
+## 🌟 Features
+
+### End-to-End Tests
+
+The tests are written in **TypeScript** and follow the **Page Object Model (POM)** for better maintainability and reusability.
+
+#### **🔑 Login Tests**
+
+- **Login as Default User**:
+    - Verifies login page elements.
+    - Logs in as the default user.
+    - Asserts redirection to the Projects Page.
+
+#### **📂 Projects Tests**
+
+- **User Can Add a Project**:
+    - Logs in via API.
+    - Adds a new project using randomly generated titles and descriptions (via `faker.js`).
+    - Confirms the project appears in the Projects Page.
+- **Default User Can Create a Project**:
+    - Verifies that a user can create a project by submitting the project form.
+- **Create a Project with Multiple Owners**:
+    - Creates a project with multiple owners.
+    - Logs in as assigned users to verify access.
+    - Confirms assigned users can view the project in their project list.
+
+#### **🚪 Logout Tests**
+
+- **User Can Log Out**:
+    - Confirms a logged-in user can log out successfully.
+    - Asserts redirection to the login page.
+
+---
+
+## 📈 Performance Tests
+
+[Performance tests](https://github.com/DanielRamos84/jira-clone-testing-playwright-jmeter/blob/master/jmeter/README.md) are implemented using JMeter to analyze and validate the system's performance under various load conditions.
+
+---
+
+## 🎯 Project Highlights
+
+- **Testing Frameworks**:
+    - End-to-End Testing: [Playwright](https://playwright.dev/) with **TypeScript**
+    - Performance Testing: [JMeter](https://jmeter.apache.org/)
+- **Testing Design**:
+    - Organized using the **Page Object Model (POM)** for scalability.
+    - Incorporates **API-driven tests** for efficiency.
+    - Utilizes `faker.js` for generating dynamic test data.
