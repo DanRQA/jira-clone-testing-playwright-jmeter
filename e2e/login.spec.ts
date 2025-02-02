@@ -2,13 +2,8 @@ import { test, expect, Page } from "@playwright/test";
 import { LoginPage } from "../pom/loginPage";
 import { ProjectsPage } from "../pom/projectsPage";
 
-test("Login as default user", async ({
-  page,
-  baseURL,
-}: {
-  page: Page;
-  baseURL?: string;
-}): Promise<void> => {
+test.use({ storageState: { cookies: [], origins: [] } });
+test("Login as Default / Admin user", async ({ page }: { page: Page }): Promise<void> => {
   const loginPage = new LoginPage(page);
   const projectsPage = new ProjectsPage(page);
 
