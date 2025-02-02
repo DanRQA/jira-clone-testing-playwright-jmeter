@@ -2,6 +2,8 @@ import { test, expect, Page } from "@playwright/test";
 import { ProjectsPage } from "../pom/projectsPage";
 import { login } from "../api/loginApi";
 import { faker } from "@faker-js/faker";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 /**
  * Generates random project details using faker
@@ -14,13 +16,7 @@ function generateProjectDetails(): { projectTitle: string; projectDescription: s
   };
 }
 
-test.beforeEach(async ({ page, baseURL }: { page: Page; baseURL?: string }) => {
-  if (!baseURL) {
-    throw new Error("baseURL is not defined");
-  }
-  // Default user login
-  await login(page, baseURL); // uses DS_USER_ID by default
-
+test.beforeEach(async ({ page }: { page: Page }) => {
   const projectsPage = new ProjectsPage(page);
   await test.step("Default user is logged in via API and starts on the Projects Page", async () => {
     await projectsPage.navigateTo();
@@ -49,13 +45,9 @@ test("Default user is able to create a project", async ({ page }: { page: Page }
 
 test("Default user can create a project and assign multiple users as owners", async ({
   page,
-  baseURL,
 }: {
   page: Page;
-  baseURL?: string;
 }) => {
-  if (!baseURL) throw new Error("baseURL is not defined");
-
   const projectsPage = new ProjectsPage(page);
   const { projectTitle, projectDescription } = generateProjectDetails();
 
@@ -84,7 +76,7 @@ test("Default user can create a project and assign multiple users as owners", as
   await test.step("Second user can access the project", async () => {
     const adUserId = process.env.AD_USER_ID;
     if (!adUserId) throw new Error("AD_USER_ID is not defined");
-    await login(page, baseURL, adUserId);
+    await login(page, adUserId);
     await projectsPage.navigateTo();
     await expect(projectsPage.getProjectCardTitle(projectTitle)).toBeVisible();
   });
@@ -93,31 +85,24 @@ test("Default user can create a project and assign multiple users as owners", as
   await test.step("Third user can access the project", async () => {
     const wUserId = process.env.W_USER_ID;
     if (!wUserId) throw new Error("W_USER_ID is not defined");
-    await login(page, baseURL, wUserId);
+    await login(page, wUserId);
     await projectsPage.navigateTo();
     await expect(projectsPage.getProjectCardTitle(projectTitle)).toBeVisible();
   });
 });
 
-test("Project Owner is Able to Delete Project", async ({
-  page,
-  baseURL,
-}: {
-  page: Page;
-  baseURL?: string;
-}) => {
-  if (!baseURL) throw new Error("baseURL is not defined");
+test("Project Owner is Able to Delete Project", async ({ page }: { page: Page }) => {
   const projectsPage = new ProjectsPage(page);
 
   const { projectTitle, projectDescription } = generateProjectDetails();
 
   await test.step("Create new project via API", async () => {
-    const postNewProject = await page.request.post(`${baseURL}/projects/new`, {
+    const postNewProject = await page.request.post("/projects/new", {
       form: {
         _data: "routes/__main/projects/new",
         title: projectTitle,
         description: projectDescription,
-        user: "1c6855bf-9a0f-4a45-9641-7b7c7855c570",
+        user: process.env.DS_USER_ID || "",
         _action: "upsert",
       },
     });

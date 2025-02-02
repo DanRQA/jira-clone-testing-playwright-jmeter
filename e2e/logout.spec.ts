@@ -1,16 +1,10 @@
 import { test, expect, Page } from "@playwright/test";
 import { ProjectsPage } from "../pom/projectsPage";
-import { login } from "../api/loginApi";
 import { LoginPage } from "../pom/loginPage";
 
-test.beforeEach(async ({ page, baseURL }: { page: Page; baseURL?: string }) => {
-  if (!baseURL) {
-    throw new Error("baseURL is not defined");
-  }
-  await login(page, baseURL);
-
+test.beforeEach(async ({ page }: { page: Page }) => {
   const projectsPage = new ProjectsPage(page);
-  await test.step("User is logged in via api and starts in the Projects Page", async (): Promise<void> => {
+  await test.step("User navigates to projects page", async (): Promise<void> => {
     await projectsPage.navigateTo();
     await expect(page).toHaveURL(projectsPage.getPageUrl());
   });
