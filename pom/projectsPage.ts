@@ -26,7 +26,7 @@ export class ProjectsPage {
     this.userCheckbox = page.getByRole("checkbox");
     this.logOutBtn = page.getByRole("button", { name: "Log out" });
     this.userAvatarBtn = page.getByTestId("user-avatar");
-    this.deleteProjectBtn = page.getByTitle("Delete project");
+    this.deleteProjectBtn = page.getByLabel("Open delete issue dialog");
     this.deleteIssueTxt = page.getByText("Delete issue?");
     this.confirmDeleteProjectBtn = page.getByRole("button", { name: "Delete" });
   }
@@ -72,6 +72,10 @@ export class ProjectsPage {
     return this.page.getByRole("heading", { name: projectTitle });
   }
 
+  getDeleteProjectBtnState(): Locator {
+    return this.deleteProjectBtn;
+  }
+
   async clickDeleteProjectBtn(projectTitle: string): Promise<void> {
     const projectCard = this.page
       .locator(`h2:has-text("${projectTitle}")`)
@@ -79,6 +83,15 @@ export class ProjectsPage {
       .locator("..")
       .locator("..");
     await projectCard.locator(this.deleteProjectBtn).click();
+  }
+
+  getDeleteProjectBtnStatus(projectTitle: string): Locator {
+    const projectCard = this.page
+      .locator(`h2:has-text("${projectTitle}")`)
+      .locator("..")
+      .locator("..")
+      .locator("..");
+    return projectCard.locator(this.getDeleteProjectBtnState());
   }
 
   getDeleteIssueModal(): Locator {

@@ -140,3 +140,14 @@ test("Project Owner is Able to Delete Project", async ({ page }: { page: Page })
     await expect(projectsPage.getProjectCardTitle(projectTitle)).not.toBeVisible();
   });
 });
+
+test("Unable to delete default projects", async ({ page }: { page: Page }) => {
+  const projectsPage = new ProjectsPage(page);
+
+  await test.step("Assert user is unable to delete default JIRA Clone project", async () => {
+    await expect(projectsPage.getDeleteProjectBtnStatus("JIRA Clone")).toBeDisabled();
+  });
+  await test.step("Assert user is unable to delete default Second project", async () => {
+    await expect(projectsPage.getDeleteProjectBtnStatus("Second Project")).toBeDisabled();
+  });
+});
