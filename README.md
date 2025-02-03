@@ -6,7 +6,7 @@ This project is a fork of [daniserrano7/jira-clone](https://github.com/daniserra
 - **End-to-End Tests** using [Playwright](https://playwright.dev/) and **TypeScript**
 - **Performance Tests** using [JMeter](https://jmeter.apache.org/).
 
-> 🛠️ **Work in Progress**: I'm actively adding new tests and improving this project. Stay tuned for updates!
+> 🛠️ **Work in Progress**: Testing features for issues are currently being developed and will be added soon.
 
 ---
 
@@ -24,9 +24,8 @@ The tests are written in **TypeScript** and follow the **Page Object Model (POM)
     - Asserts redirection to the Projects Page.
 
 #### **📂 Projects Tests**
-
+- Tests utilize stored API authentication state for efficiency.
 - **User Can Add a Project**:
-    - Logs in via API.
     - Adds a new project using randomly generated titles and descriptions (via `faker.js`).
     - Confirms the project appears in the Projects Page.
 - **Default User Can Create a Project**:
@@ -35,15 +34,15 @@ The tests are written in **TypeScript** and follow the **Page Object Model (POM)
     - Creates a project with multiple owners.
     - Logs in as assigned users to verify access.
     - Confirms assigned users can view the project in their project list.
+- **Project Restriction Deletion**
+    - Verifies that default application projects can't be deleted. 
 
 #### **🚪 Logout Tests**
-
+- Tests utilize stored API authentication state for efficiency.
 - **User Can Log Out**:
     - Confirms a logged-in user can log out successfully.
     - Asserts redirection to the login page.
-
 ---
-
 ## 📈 Performance Tests
 
 [Performance tests](https://github.com/DanielRamos84/jira-clone-testing-playwright-jmeter/blob/master/jmeter/README.md) are implemented using JMeter to analyze and validate the system's performance under various load conditions.
