@@ -1,61 +1,39 @@
-# base node image
-FROM node:16-bullseye-slim as base
+# Start from a Node.js base image
+FROM node:18
 
-# Install openssl for Prisma
-RUN apt-get update && apt-get install -y openssl
+# Metadata
+LABEL maintainer="Daniel Ramos dramos.qa@gmail.com"
+LABEL version="1.0"
 
-# Install all node_modules, including dev dependencies
-FROM base as deps
+# Install necessary dependencies
+RUN apt-get update && apt-get install -y \
+  wget \
+  curl \
+  git \
+  && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir /app
+# Install dockerize (to wait for DB)
+RUN wget https://github.com/jwilder/dockerize/releases/download/v0.6.1/dockerize-linux-amd64-v0.6.1.tar.gz && \
+    tar -xzvf dockerize-linux-amd64-v0.6.1.tar.gz -C /usr/local/bin && \
+    rm dockerize-linux-amd64-v0.6.1.tar.gz
+
+# Set working directory inside container
 WORKDIR /app
 
-ADD package.json ./
-RUN npm install --production=false
+# Clone the project
+RUN git clone https://github.com/DanielRamos84/jira-clone-testing-playwright-jmeter.git
 
-# Setup production node_modules
-FROM base as production-deps
+# Move into the test folder
+WORKDIR /app/jira-clone-testing-playwright-jmeter
 
-RUN mkdir /app
-WORKDIR /app
+# Install dependencies
+RUN npm install
 
-COPY --from=deps /app/node_modules /app/node_modules
-ADD package.json ./
-RUN npm prune --production
+# Install Playwright browsers
+RUN npx playwright install --with-deps
 
-# Build the app
-FROM base as build
+# Expose the app port
+EXPOSE 3000
 
-ENV NODE_ENV=production
-
-RUN mkdir /app
-WORKDIR /app
-
-COPY --from=deps /app/node_modules /app/node_modules
-
-# If we're using Prisma, uncomment to cache the prisma schema
-ADD src/infrastructure/db .
-RUN npx prisma generate
-
-ADD . .
-RUN npm run build
-
-# Finally, build the production image with minimal footprint
-FROM base
-
-ENV NODE_ENV=production
-
-RUN mkdir /app
-WORKDIR /app
-
-COPY --from=production-deps /app/node_modules /app/node_modules
-
-# Uncomment if using Prisma
-COPY --from=build /app/node_modules/.prisma /app/node_modules/.prisma
-
-COPY --from=build /app/build /app/build
-COPY --from=build /app/public /app/public
-ADD . .
-EXPOSE 8080
-
-CMD ["npm", "run", "start:migrate"]
+# Start the app after DB is ready, then run tests
+CMD ["sh", "-c", "dockerize -wait tcp://jira_clone_db:5432 -timeout 60s && npm run setup-and-dev & sleep 10 && npx playwright test && tail -f /dev/null"]

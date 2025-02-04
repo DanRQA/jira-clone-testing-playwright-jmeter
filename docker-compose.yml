@@ -1,18 +1,17 @@
-version: '3.8'
 services:
-  jenkins:
-    image: jenkins/jenkins:lts
-    ports:
-      - "8082:8080"
-      - "50000:50000"
-    volumes:
-      - jenkins_home:/var/jenkins_home
-    environment:
-      - DATABASE_URL=postgresql://jira_user:admin@postgres:5432/jira_clone_db
+  app:
+    build: .
+    env_file:
+      - .env
     depends_on:
-      - postgres
+      jira_clone_db:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./playwright-report:/app/jira-clone-testing-playwright-jmeter/playwright-report  # Persist Playwright report
 
-  postgres:
+  jira_clone_db:
     image: postgres:latest
     environment:
       POSTGRES_USER: jira_user
@@ -20,6 +19,8 @@ services:
       POSTGRES_DB: jira_clone_db
     ports:
       - "5432:5432"
-
-volumes:
-  jenkins_home:
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jira_user -d jira_clone_db"]
+      interval: 5s
+      retries: 5
+      start_period: 10s
