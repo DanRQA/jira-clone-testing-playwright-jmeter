@@ -8,8 +8,6 @@ services:
         condition: service_healthy
     ports:
       - "3000:3000"
-    volumes:
-      - ./playwright-report:/app/jira-clone-testing-playwright-jmeter/playwright-report  # Persist Playwright report
 
   jira_clone_db:
     image: postgres:latest
@@ -24,3 +22,13 @@ services:
       interval: 5s
       retries: 5
       start_period: 10s
+
+  tests:
+    build: .
+    env_file:
+      - .env
+    depends_on:
+      - app
+    command: ["sh", "-c", "sleep 10 && npx playwright test"]  # Wait for the app to fully start before running tests
+    volumes:
+      - ./playwright-report:/app/jira-clone-testing-playwright-jmeter/playwright-report  # Persist Playwright report
