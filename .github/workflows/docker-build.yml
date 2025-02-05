@@ -1,9 +1,9 @@
-name: Build and Push Docker Image
+name: Build, Push Docker Image & Run Playwright Tests
 
 on:
   push:
     branches:
-      - master  # Adjust this to the branch you want to trigger on
+      - master
 
 jobs:
   build:
@@ -35,3 +35,19 @@ jobs:
           context: .
           push: true
           tags: dramos84/jira-clone-tests:${{ github.sha }}
+
+  run-tests:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run Playwright Tests inside Docker
+        run: |
+          docker run --rm \
+            -e SESSION_SECRET=${{ secrets.SESSION_SECRET }} \
+            -e DATABASE_URL=${{ secrets.DATABASE_URL }} \
+            -e DS_USER_ID=${{ secrets.DS_USER_ID }} \
+            -e AD_USER_ID=${{ secrets.AD_USER_ID }} \
+            -e W_USER_ID=${{ secrets.W_USER_ID }} \
+            dramos84/jira-clone-tests:latest \
+            npx playwright test
