@@ -36,4 +36,4 @@ RUN npx playwright install --with-deps
 EXPOSE 3000
 
 # Start the app after DB is ready, then run tests
-CMD ["sh", "-c", "dockerize -wait tcp://jira_clone_db:5432 -timeout 60s && npm run setup-and-dev & sleep 10 && npx playwright test && tail -f /dev/null"]
+CMD ["sh", "-c", "dockerize -wait tcp://jira_clone_db:5432 -timeout 60s && npm run setup-and-dev & sleep 30 && npx playwright test && tail -f /dev/null"]
