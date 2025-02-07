@@ -1,9 +1,10 @@
 name: Build, Push, and Run Playwright Tests
 
 on:
-  push:
-    branches:
-        - master
+  #push
+    #branches:
+     #   - master
+   workflow_dispatch:
 jobs:
   build:
 	runs-on: ubuntu-latest
