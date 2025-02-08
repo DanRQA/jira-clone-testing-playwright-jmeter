@@ -1,14 +1,11 @@
-name: Build, Push, and Run Playwright Tests
+name: Combined CI
 
-on:
-  # push:
-  #   branches:
-  #     - master
-  workflow_dispatch:
+on: [workflow_dispatch]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -63,6 +60,14 @@ jobs:
       - name: Wait for Services to be Healthy
         run: docker-compose exec app sh -c "while ! curl -sSf http://localhost:3000 > /dev/null; do sleep 5; done"
 
+      - name: Ensure Playwright report directory is clean
+        run: |
+          if [ -d "playwright-report" ]; then
+            rm -rf playwright-report/*
+          else
+            mkdir -p playwright-report
+          fi
+
       - name: Run Playwright Tests in Docker (Using .env)
         run: |
           docker run --rm \
@@ -75,6 +80,12 @@ jobs:
             -e W_USER_ID=${{ secrets.W_USER_ID }} \
             dramos84/jira-clone-tests:latest \
             sh -c "npx playwright test && exit 0"
+
+      - name: Verify Playwright report directory
+        run: |
+          if [ ! -d "playwright-report" ] || [ -z "$(ls -A playwright-report)" ]; then
+            echo "No Playwright report found."
+            exit 1
 
       - name: Upload Playwright Test Results
         uses: actions/upload-artifact@v4
