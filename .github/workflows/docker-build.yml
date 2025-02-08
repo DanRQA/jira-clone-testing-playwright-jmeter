@@ -56,7 +56,7 @@ jobs:
         working-directory: /home/runner/work/jira-clone-testing-playwright-jmeter/jira-clone-testing-playwright-jmeter
 
       - name: Wait for Services to be Healthy
-        run: docker-compose run --rm app sh -c "while ! curl -sSf http://localhost:3000 > /dev/null; do sleep 5; done"
+        run: docker-compose exec app sh -c "while ! curl -sSf http://localhost:3000 > /dev/null; do sleep 5; done"
 
       - name: Run Playwright Tests in Docker (Using .env)
         run: |
@@ -69,7 +69,7 @@ jobs:
             -e AD_USER_ID=${{ secrets.AD_USER_ID }} \
             -e W_USER_ID=${{ secrets.W_USER_ID }} \
             dramos84/jira-clone-tests:latest \
-            npx playwright test
+            npx playwright test --reporter=html --output=playwright-report
 
       - name: Upload Playwright Test Results
         uses: actions/upload-artifact@v4
