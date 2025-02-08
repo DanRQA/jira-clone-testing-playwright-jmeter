@@ -66,7 +66,7 @@ jobs:
             -e AD_USER_ID=${{ secrets.AD_USER_ID }} \
             -e W_USER_ID=${{ secrets.W_USER_ID }} \
             dramos84/jira-clone-tests:latest \
-            sh -c "npx playwright test && pkill -f 'npx playwright'"
+            npx playwright test --reporter=html:playwright-report
 
       - name: Upload Playwright Test Results
         uses: actions/upload-artifact@v4
