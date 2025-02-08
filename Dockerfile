@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y \
 
 # Install dockerize (to wait for DB)
 RUN wget https://github.com/jwilder/dockerize/releases/download/v0.6.1/dockerize-linux-amd64-v0.6.1.tar.gz && \
-    tar -xzvf dockerize-linux-amd64-v0.6.1.tar.gz -C /usr/local/bin && \
-    rm dockerize-linux-amd64-v0.6.1.tar.gz
+  tar -xzvf dockerize-linux-amd64-v0.6.1.tar.gz -C /usr/local/bin && \
+  rm dockerize-linux-amd64-v0.6.1.tar.gz
 
 # Set working directory inside container
 WORKDIR /app
@@ -35,5 +35,5 @@ RUN npx playwright install --with-deps
 # Expose the app port
 EXPOSE 3000
 
-# Start the app after DB is ready, then run tests
-CMD ["sh", "-c", "dockerize -wait tcp://jira_clone_db:5432 -timeout 60s && npm run setup-and-dev & sleep 30 && npx playwright test && tail -f /dev/null"]
+# Start the app after DB is ready
+CMD ["sh", "-c", "dockerize -wait tcp://jira_clone_db:5432 -timeout 60s && npm run setup-and-dev && tail -f /dev/null"]
