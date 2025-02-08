@@ -3,6 +3,8 @@ services:
     build: .
     env_file:
       - .env
+    environment:
+      DATABASE_URL: postgresql://jira_user:admin@jira_clone_db:5432/jira_clone_db
     depends_on:
       jira_clone_db:
         condition: service_healthy
@@ -10,9 +12,9 @@ services:
       - "3000:3000"
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:3000/ || exit 1"]
-      interval: 30s
+      interval: 10s
       timeout: 10s
-      retries: 3
+      retries: 5
       start_period: 30s
 
   jira_clone_db:
@@ -33,6 +35,8 @@ services:
     build: .
     env_file:
       - .env
+    environment:
+      DATABASE_URL: postgresql://jira_user:admin@jira_clone_db:5432/jira_clone_db
     depends_on:
       app:
         condition: service_healthy

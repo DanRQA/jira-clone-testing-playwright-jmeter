@@ -28,6 +28,14 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Create .env file
+        run: |
+          echo "SESSION_SECRET=${{ secrets.SESSION_SECRET }}" >> .env
+          echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
+          echo "DS_USER_ID=${{ secrets.DS_USER_ID }}" >> .env
+          echo "AD_USER_ID=${{ secrets.AD_USER_ID }}" >> .env
+          echo "W_USER_ID=${{ secrets.W_USER_ID }}" >> .env
+
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
