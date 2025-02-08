@@ -54,7 +54,7 @@ jobs:
         run: docker-compose up -d
 
       - name: Wait for Services to be Healthy
-        run: docker-compose run --rm app sh -c "while ! curl -sSf http://localhost:3000 > /dev/null; do sleep 5; done"
+        run: docker-compose exec app sh -c "while ! curl -sSf http://localhost:3000 > /dev/null; do sleep 5; done"
 
       - name: Run Playwright Tests in Docker (Using .env)
         run: |
