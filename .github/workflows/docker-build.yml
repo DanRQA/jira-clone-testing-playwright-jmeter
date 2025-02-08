@@ -1,4 +1,4 @@
-name: Combined CI
+name: Build, Push, and Run Playwright Tests
 
 on: [workflow_dispatch]
 
@@ -78,6 +78,7 @@ jobs:
             -e DS_USER_ID=${{ secrets.DS_USER_ID }} \
             -e AD_USER_ID=${{ secrets.AD_USER_ID }} \
             -e W_USER_ID=${{ secrets.W_USER_ID }} \
+            -e CI=true \
             dramos84/jira-clone-tests:latest \
             sh -c "npx playwright test && exit 0"
 
