@@ -35,6 +35,7 @@ jobs:
           echo "DS_USER_ID=${{ secrets.DS_USER_ID }}" >> .env
           echo "AD_USER_ID=${{ secrets.AD_USER_ID }}" >> .env
           echo "W_USER_ID=${{ secrets.W_USER_ID }}" >> .env
+          echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
         working-directory: /home/runner/work/jira-clone-testing-playwright-jmeter/jira-clone-testing-playwright-jmeter
 
       - name: Build and Push Docker Image
@@ -50,6 +51,10 @@ jobs:
           context: .
           push: true
           tags: dramos84/jira-clone-tests:${{ github.sha }}
+
+      - name: Build Docker Image
+        run: docker-compose build
+        working-directory: /home/runner/work/jira-clone-testing-playwright-jmeter/jira-clone-testing-playwright-jmeter
 
       - name: Start Services with Docker Compose
         run: docker-compose up -d
