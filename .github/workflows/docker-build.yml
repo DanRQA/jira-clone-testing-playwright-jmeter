@@ -69,7 +69,7 @@ jobs:
             -e AD_USER_ID=${{ secrets.AD_USER_ID }} \
             -e W_USER_ID=${{ secrets.W_USER_ID }} \
             dramos84/jira-clone-tests:latest \
-            npx playwright test --reporter=html --output=playwright-report
+            npx playwright test
 
       - name: Upload Playwright Test Results
         uses: actions/upload-artifact@v4
