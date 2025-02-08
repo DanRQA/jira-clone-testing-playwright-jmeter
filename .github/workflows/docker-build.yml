@@ -87,6 +87,7 @@ jobs:
           if [ ! -d "playwright-report" ] || [ -z "$(ls -A playwright-report)" ]; then
             echo "No Playwright report found."
             exit 1
+          fi
 
       - name: Upload Playwright Test Results
         uses: actions/upload-artifact@v4
