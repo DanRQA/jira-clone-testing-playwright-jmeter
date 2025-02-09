@@ -1,6 +1,9 @@
 name: Build, Push, and Run Playwright Tests
 
-on: [workflow_dispatch]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
