@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      docker:
+        image: docker:19.03.12
+        options: --privileged
+        ports:
+          - 3000:3000
+          - 5432:5432
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Compose
+        run: docker-compose up -d
+
+      - name: Run tests
+        run: docker-compose run tests
+
+      - name: Upload Playwright test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-test-results
+          path: playwright-report
+          retention-days: 7
+          if-no-files-found: warn

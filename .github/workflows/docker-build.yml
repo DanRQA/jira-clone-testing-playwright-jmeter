@@ -1,14 +1,14 @@
 name: Build, Push, and Run Playwright Tests
 
 on:
-  # push:
-  #   branches:
-  #     - master
-  workflow_dispatch:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -35,6 +35,7 @@ jobs:
           echo "DS_USER_ID=${{ secrets.DS_USER_ID }}" >> .env
           echo "AD_USER_ID=${{ secrets.AD_USER_ID }}" >> .env
           echo "W_USER_ID=${{ secrets.W_USER_ID }}" >> .env
+          echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
         working-directory: /home/runner/work/jira-clone-testing-playwright-jmeter/jira-clone-testing-playwright-jmeter
 
       - name: Build and Push Docker Image
@@ -51,12 +52,24 @@ jobs:
           push: true
           tags: dramos84/jira-clone-tests:${{ github.sha }}
 
+      - name: Build Docker Image
+        run: docker-compose build
+        working-directory: /home/runner/work/jira-clone-testing-playwright-jmeter/jira-clone-testing-playwright-jmeter
+
       - name: Start Services with Docker Compose
         run: docker-compose up -d
         working-directory: /home/runner/work/jira-clone-testing-playwright-jmeter/jira-clone-testing-playwright-jmeter
 
       - name: Wait for Services to be Healthy
         run: docker-compose exec app sh -c "while ! curl -sSf http://localhost:3000 > /dev/null; do sleep 5; done"
+
+      - name: Ensure Playwright report directory is clean
+        run: |
+          if [ -d "playwright-report" ]; then
+            rm -rf playwright-report/*
+          else
+            mkdir -p playwright-report
+          fi
 
       - name: Run Playwright Tests in Docker (Using .env)
         run: |
@@ -68,8 +81,16 @@ jobs:
             -e DS_USER_ID=${{ secrets.DS_USER_ID }} \
             -e AD_USER_ID=${{ secrets.AD_USER_ID }} \
             -e W_USER_ID=${{ secrets.W_USER_ID }} \
+            -e CI=true \
             dramos84/jira-clone-tests:latest \
-            npx playwright test --reporter=html --output=playwright-report
+            sh -c "npx playwright test && exit 0"
+
+      - name: Verify Playwright report directory
+        run: |
+          if [ ! -d "playwright-report" ] || [ -z "$(ls -A playwright-report)" ]; then
+            echo "No Playwright report found."
+            exit 1
+          fi
 
       - name: Upload Playwright Test Results
         uses: actions/upload-artifact@v4

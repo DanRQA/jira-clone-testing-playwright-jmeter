@@ -37,6 +37,7 @@ services:
       - .env
     environment:
       DATABASE_URL: postgresql://jira_user:admin@jira_clone_db:5432/jira_clone_db
+      BASE_URL: http://app:3000
     depends_on:
       app:
         condition: service_healthy
