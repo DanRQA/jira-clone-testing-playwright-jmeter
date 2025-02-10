@@ -38,7 +38,7 @@ export default defineConfig({
     command: "npm run setup-and-dev", // Use the command you normally use to start your application
     port: 3000, // Ensure this is the correct port for your server
     timeout: 180 * 1000, // Increase timeout to 180 seconds
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: true,
   },
 
   /* Configure projects for major browsers */
