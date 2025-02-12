@@ -7,6 +7,7 @@ This project is a fork of [daniserrano7/jira-clone](https://github.com/daniserra
 - **Performance Tests** using [JMeter](https://jmeter.apache.org/)
 
 > 🛠️ **Work in Progress**: 
+- Initiate API testing for the projects feature, covering both positive and negative scenarios.
 - Testing features for issues are currently being developed and will be added soon.
 - Expand performance tests, manage sensitive data
 

@@ -12,7 +12,7 @@ import { defineConfig, devices } from "@playwright/test";
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: process.env.TEST_DIR || "./e2e", // or './tests-examples'
+  testDir: process.env.TEST_DIR || "./api_tests", // or './tests-examples'
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -22,9 +22,9 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [
-    ["html", { outputFolder: "playwright-report", open: process.env.CI ? "never" : "on-failure" }],
-  ], // Use environment variable to control 'open' option
+//   reporter: [
+//     ["html", { outputFolder: "playwright-report", open: process.env.CI ? "never" : "on-failure" }],
+//   ], // Use environment variable to control 'open' option
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -54,37 +54,5 @@ export default defineConfig({
       },
       dependencies: ["setup"],
     },
-
-    {
-      name: "firefox",
-      use: { ...devices["Desktop Firefox"], storageState: "playwright/.auth/admin.json" },
-      dependencies: ["setup"],
-    },
-
-    {
-      name: "webkit",
-      use: { ...devices["Desktop Safari"], storageState: "playwright/.auth/admin.json" },
-      dependencies: ["setup"],
-    },
-
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
-
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
   ],
 });
