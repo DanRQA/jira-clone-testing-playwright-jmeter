@@ -14,6 +14,7 @@
     "type-check": "tsc --pretty --noEmit -p tsconfig.json",
     "lint": "pnpm eslint --ext ts,tsx src",
     "test-ui": "playwright test",
+    "test-api": "playwright test --config=api.config.ts",
     "test-coverage": "vitest run --coverage",
     "test-all": "pnpm run type-check && pnpm run lint && pnpm run test",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
