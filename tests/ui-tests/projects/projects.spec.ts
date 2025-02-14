@@ -1,6 +1,6 @@
 import { test, expect, Page } from "@playwright/test";
-import { ProjectsPage } from "../pom/projectsPage";
-import { login } from "../helpers/loginApi";
+import { ProjectsPage } from "../../../pom/projectsPage";
+import { login } from "../../../helpers/loginApi";
 import { faker } from "@faker-js/faker";
 import * as dotenv from "dotenv";
 dotenv.config();
