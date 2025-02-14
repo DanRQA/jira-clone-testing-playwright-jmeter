@@ -12,7 +12,7 @@ import { defineConfig, devices } from "@playwright/test";
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: process.env.TEST_DIR || "./e2e", // or './tests-examples'
+  testDir: process.env.TEST_DIR || "./tests/ui-tests", // or './tests-examples'
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -35,12 +35,10 @@ export default defineConfig({
   },
   // Run your local dev server before starting the tests
   webServer: {
-    command: "npm run setup-and-dev",
-    url: "http://localhost:3000",
+    command: "npm run setup-and-dev", // Use the command you normally use to start your application
+    port: 3000, // Ensure this is the correct port for your server
+    timeout: 180 * 1000, // Increase timeout to 180 seconds
     reuseExistingServer: true,
-    timeout: 120 * 1000,
-    stdout: "ignore",
-    stderr: "pipe",
   },
 
   /* Configure projects for major browsers */
@@ -87,4 +85,11 @@ export default defineConfig({
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
   ],
+
+  /* Run your local dev server before starting the tests */
+  // webServer: {
+  //   command: 'npm run start',
+  //   url: 'http://127.0.0.1:3000',
+  //   reuseExistingServer: !process.env.CI,
+  // },
 });

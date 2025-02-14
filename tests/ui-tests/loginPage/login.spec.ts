@@ -1,6 +1,6 @@
 import { test, expect, Page } from "@playwright/test";
-import { LoginPage } from "../pom/loginPage";
-import { ProjectsPage } from "../pom/projectsPage";
+import { LoginPage } from "../../../pom/loginPage";
+import { ProjectsPage } from "../../../pom/projectsPage";
 
 test.use({ storageState: { cookies: [], origins: [] } });
 test("Login as Default / Admin user", async ({ page }: { page: Page }): Promise<void> => {

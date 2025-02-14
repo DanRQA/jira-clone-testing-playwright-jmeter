@@ -31,7 +31,7 @@ services:
       retries: 5
       start_period: 10s
 
-  tests:
+  ui_tests:
     build: .
     env_file:
       - .env
@@ -42,5 +42,19 @@ services:
       app:
         condition: service_healthy
     command: ["sh", "-c", "sleep 30 && npx playwright test"]
+    volumes:
+      - ./playwright-report:/app/jira-clone-testing-playwright-jmeter/playwright-report  # Persist Playwright report
+
+  api_tests:
+    build: .
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://jira_user:admin@jira_clone_db:5432/jira_clone_db
+      BASE_URL: http://app:3000
+    depends_on:
+      app:
+        condition: service_healthy
+    command: ["sh", "-c", "sleep 30 && npx playwright test --config=api.config.ts --project=chromium"]
     volumes:
       - ./playwright-report:/app/jira-clone-testing-playwright-jmeter/playwright-report  # Persist Playwright report
