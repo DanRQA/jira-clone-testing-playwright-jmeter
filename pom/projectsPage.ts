@@ -69,7 +69,7 @@ export class ProjectsPage {
   }
 
   getProjectCardTitle(projectTitle: string): Locator {
-    return this.page.getByRole("heading", { name: projectTitle });
+    return this.page.getByRole("link", { name: projectTitle });
   }
 
   getDeleteProjectBtnState(): Locator {
